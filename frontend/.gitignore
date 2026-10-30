@@ -1,0 +1,42 @@
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node.js / React
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Java / Maven
+**/target/
+*.class
+
+# Uploaded documents
+**/uploads/
+*.pdf
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+application-local.properties
+application-secret.properties
+
+# Logs
+*.log
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated GitHub modernization files
+.github/modernize/

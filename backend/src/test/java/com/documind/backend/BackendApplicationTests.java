@@ -1,13 +1,33 @@
+
 package com.documind.backend;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 
-@SpringBootTest
+import static org.junit.jupiter.api.Assertions.*;
+
 class BackendApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    private final HealthController controller =
+            new HealthController();
 
+    @Test
+    void healthEndpointReturnsSuccessMessage() {
+
+        String response = controller.health();
+
+        assertEquals(
+                "DocuMind AI Backend is running!",
+                response
+        );
+    }
+
+    @Test
+    void healthEndpointReturnsNonEmptyResponse() {
+
+        String response = controller.health();
+
+        assertNotNull(response);
+        assertFalse(response.isBlank());
+    }
 }
